@@ -1,6 +1,30 @@
 <!DOCTYPE html>
 <meta charset=utf-8>
 <html>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+    align-self: center;
+}
+p {
+    text-align: center;
+      font-family: "Arial";
+      font-size: 20px;
+}
+h3 {
+  text-align: center;
+  font-family: "Arial";
+  font-size: 50px;
+}
+</style>
 <body>
 
 <h3>Loan Calculator</h3>
@@ -20,15 +44,19 @@
 <p>What is the APR of the loan? (without percentage mark)</p>
 <input type="text" id="Apr" value="0">
 
-
-<button onclick="myFunction()">Caluclate</button>
-
 <p></p>
+<br />
+<p><button class="w3-button w3-black w3-round" onclick=myFunction()>Caluclate</button></p>
 
-<font size="-1">Any suggestions? </font>
-<font size="-1"></font>
-<font size="-1">Contact me at:</font>
-<font size="-1">jackontheedge@gmail.com</font>
+
+<br />
+<br />
+<br />
+
+<p>Any suggestions? </p>
+<p></p>
+<p>Contact me at:</p>
+<p>jackontheedge@gmail.com</p>
 
 <script>
 function myFunction() {
