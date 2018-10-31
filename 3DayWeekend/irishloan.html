@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<meta charset=utf-8>
+<html>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+    align-self: center;
+}
+p {
+    text-align: center;
+      font-family: "Arial";
+      font-size: 20px;
+}
+h3 {
+  text-align: center;
+  font-family: "Arial";
+  font-size: 50px;
+}
+</style>
+<body>
+
+<h3>Áireamhán Iasachtaí</h3>
+
+<p>Ceard é méid an iasacht?</p>
+<input type="text" id="Cost" value="0">
+
+<p>Cé comh fada (i blianta) ata an iasacht?</p>
+<input type="text" id="Years" value="0">
+
+<p>Cé mhead uair gach bhliain a iocann thú do iasacht as?</p>
+<input type="text" id="Oft" value="0">
+
+<p>Cé mhead ata gach tráthchuid?</p>
+<input type="text" id="payEm" value="0">
+
+<p>Céard é an APR? (gan marc céatadáin)</p>
+<input type="text" id="Apr" value="0">
+<p></p>
+<br />
+<p><button class="w3-button w3-black w3-round" onclick=myFunction()>Ríomh</button></p>
+
+
+<br />
+<br />
+<br />
+
+<p>Aon moltaí? </p>
+<p></p>
+<p>Dhéanamh teagmháil liom ag:</p>
+<p>jackontheedge@gmail.com</p>
+
+<script>
+function myFunction() {
+    var Cost = document.getElementById("Cost").value;
+    var Years = document.getElementById("Years").value;
+    var Oft = document.getElementById("Oft").value;
+    var FApr = document.getElementById("Apr").value;
+    var Apr = FApr / 100;
+    var payEm = document.getElementById("payEm").value;
+    var howmany = Oft * Years;
+    var intrest = Cost*Apr;
+    var left = 0;
+    var count = 0;
+    while (count < howmany - 2) {
+    left = Cost - payEm;
+    intrest += left * Apr;
+   	count += 1;
+}
+    console.log(intrest);
+    console.log(Cost);
+	var Fin;
+    Fin = intrest + Cost;
+	console.log(Fin);
+    window.alert("Ba é  " + intrest + " praghas an úis agus an méid a ghlac tú ar iasacht sa chéad áit ná " + Cost);
+}
+</script>
+
+</body>
+</html>
